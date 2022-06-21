@@ -23,19 +23,16 @@
 # == TELEGRAM X ==
 
 # Keep native bridge
--keep class org.thunderdog.challegram.N { *; }
 -keep class org.thunderdog.challegram.N$* { *; }
 -keepclassmembers class org.thunderdog.challegram.N { *; }
 # Keep log
 -keep class org.thunderdog.challegram.Log
 -keepclassmembers class org.thunderdog.challegram.Log { *; }
 # Keep all related to VoIP
--keep class org.thunderdog.challegram.voip.**
 -keepclassmembers class org.thunderdog.challegram.voip.** { *; }
 # Keep sync services
 -keep class org.thunderdog.challegram.sync.**
 
-# == THIRDPARTY ==
 
 # MP4Parser
 -keep class * implements com.coremedia.iso.boxes.Box { *; }
